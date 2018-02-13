@@ -19,6 +19,10 @@ h1 {
     margin-left: 40px;
 }
 
+h2{
+    margin-left: 40px;
+}
+
 h3 {
     margin-left: 20px;
     margin-top: 30px;
@@ -30,18 +34,46 @@ header .burguer {
     font-size: 34px;
 }
 
-.espaciado p {
+p.espaciado {
     padding: 20px;
     line-height: 2em;
 }
 
+p.arriba {
+    margin-top: 20px;
+}
+
+.col1 p {
+    text-align: justify;
+    padding: 10px;
+}
+
+.col1 p.grande {
+    text-align: left;
+    padding: 10px;
+}
+
+ul li {
+    margin-left: 40px;
+    padding: 10px;
+}
+
+/* Colores del WebSite */
 .azul {
     color: royalblue;
 }
 
+.naranja {
+    color: #CC6600;
+}
+
+.blanco {
+    color: white;
+}
+
 .justify {
     line-height: 1.5em;
-    text-align: right;
+    text-align: justify;
     font-size: 16px;
 }
 
@@ -56,10 +88,16 @@ header .burguer {
 hr {
     border: 0; 
     height: 2px;
-     text-align: center;
-     margin-bottom: 30px;
-     background-image: linear-gradient(to left, #fff, royalblue, #fff);
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    background-image: linear-gradient(to left, #fff, royalblue, #fff);
 } 
+
+a:hover {
+    color: #CC6600; 
+}
+
 /* Animaciones */
 @keyframes intermitente {
     50% {color: #CC6600}
@@ -374,7 +412,7 @@ footer a:hover {
 }
 
 .direccion {
-    width: 200px;
+    width: 400px;
 }
 
 .direccion p:first-child{
@@ -508,15 +546,44 @@ fieldset {
 }
 
 /* Estilos de formulario */
-.formulario {
+.formularioAzul {
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
+    background: rgb(73,155,234); /* Old browsers */
+    background: -moz-linear-gradient(-45deg, rgba(73,155,234,1) 0%, rgba(32,124,229,1) 6%, rgba(65,105,225,1) 68%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg, rgba(73,155,234,1) 0%,rgba(32,124,229,1) 6%,rgba(65,105,225,1) 68%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg, rgba(73,155,234,1) 0%,rgba(32,124,229,1) 6%,rgba(65,105,225,1) 68%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#499bea', endColorstr='#4169e1',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.formularioBlanco {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 30px;
+
 }
 
 form {
-    width: 60%;
+    background-color: white;
+    width: 70%;
     padding: 10px;
     box-shadow: 4px 4px 16px #3f3f3fab;
+}
+
+input[type="text"]{
+    outline: none;
+}
+
+::-webkit-input-placeholder{
+    color: royalblue;
 }
 
 .col33 {
@@ -545,11 +612,6 @@ form .fila{
     
 }
 
-/* form input[type="submit"]{
-    width: 20%;
-    margin-top: 10px;
-} */
-
 .end {
     display: flex;
     justify-content: flex-end;
@@ -561,7 +623,9 @@ form .fila{
     padding: 30px;
 }
 
-
+iframe {
+    max-width: 100%;
+}
 
 /* @MEDIA */
 /* ------------------------------------------------------------------------------------------------------------------ */
@@ -620,6 +684,10 @@ form .fila{
 @media (max-width: 800px){
 
     p {
+        font-size: 16px;
+    }
+
+    ul li {
         font-size: 16px;
     }
 
